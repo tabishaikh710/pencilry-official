@@ -1,0 +1,19 @@
+.contain{
+  text-align: center;
+
+padding: 200px;
+
+position: relative;
+z-index: 2; /* Ensure content appears above the overlay */
+color: white;
+text-align: center;
+
+}
+.heading{
+    font-weight: 900;
+
+}
+.para{
+
+}
+.but{}
