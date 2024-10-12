@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from '../assets/logo.png';  // Adjust path if needed
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,24 +21,19 @@ function Navbar() {
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">Jobs</Link>
+              <Link className="nav-link" to="/jobs">Jobs</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">Companies</Link>
+              <Link className="nav-link" to="/companies">Companies</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">People</Link>
-            </li>
-            
-            <li className="nav-item">
-              <Link className="nav-link " aria-disabled="true" to="#">Disabled</Link>
+              <Link className="nav-link" to="/people">People</Link>
             </li>
           </ul>
-          <form className="d-flex" >
-           
-            <button className="btn btn-outline-success ms-1 " role="button" aria-disabled="true">Login</button>
-            <button className="btn btn-outline-success ms-1" type="submit">Post a job</button>
-          </form>
+          <div className="d-flex">
+            <Link to="/login" className="btn btn-outline-success ms-1">Login</Link>
+            <Link to="/post-job" className="btn btn-outline-success ms-1">Post a job</Link>
+          </div>
         </div>
       </div>
     </nav>

@@ -1,14 +1,27 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage'; // Adjust path as needed
+import Login from './pages/LoginPage'
+import ClientRegistration from './pages/ClientRegistration';
+import FreelancerRegistration from './pages/FreelancerRegistration';
+import SignUpPage from './pages/SignUpPage';
+import PostJob from './pages/PostAjob'; // Ensure you have this component
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Define your routes */}
         <Route path="/" element={<HomePage />} />
-        {/* Add other routes here */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/post-job" element={<PostJob />} />
+       
+        <Route path="/signup" element={<SignUpPage />} />
+
+        <Route path="/register-client" element={<ClientRegistration />} />
+        <Route path="/register-freelancer" element={<FreelancerRegistration />} />
+  
+        {/* Add other routes as needed */}
       </Routes>
     </Router>
   );

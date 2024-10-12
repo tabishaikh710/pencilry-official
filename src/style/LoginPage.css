@@ -1,0 +1,38 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .or-divider {
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .or-divider::before, .or-divider::after {
+    content: '';
+    width: 45%;
+    height: 1px;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .or-divider::before {
+    left: 0;
+  }
+  
+  .or-divider::after {
+    right: 0;
+  }
+  
