@@ -1,13 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
 import '../style/LoginForm.css';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
+  const [role, setRole] = useState(''); // Simulate role state
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login form submitted with:', email);
-    // Add your login logic here
+    
+    // Simulated login logic with role
+    if (email === 'client@example.com') {
+      setRole('client');
+    } else if (email === 'illustrator@example.com') {
+      setRole('illustrator');
+    } else {
+      alert('Invalid login');
+      return;
+    }
+
+    // Redirect based on user role
+    if (role === 'client') {
+      navigate('/client-welcome'); // Redirect to client welcome page
+    } else if (role === 'illustrator') {
+      navigate('/illustrator-welcome'); // Redirect to illustrator welcome page
+    }
   };
 
   return (
