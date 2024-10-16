@@ -27,24 +27,35 @@
   }
   
   /* Background Animation */
-  body {
-    background: linear-gradient(-45deg, #f3ec78, #af4261, #2b5876, #4e4376);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+ 
+
+/* Keyframes for the gradient animation */
+/* Global Styles */
+html, body {
+  height: 100%; /* Ensure the body takes full height */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Background Gradient for Body */
+body {
+  background: linear-gradient(-45deg, #e2a4f1, #f5dce3, #cbe4f5, #f1b2f1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
   }
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   ::selection {
     background: #2b5876;
     color: #fff;

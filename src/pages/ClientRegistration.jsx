@@ -1,5 +1,5 @@
-// pages/ClientRegistration.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import Button from '../components/Registration/ClientRegistration/Button';
 import InputField from '../components/Registration/ClientRegistration/InputField';
 import Checkbox from '../components/Registration/ClientRegistration/Checkbox';
@@ -8,6 +8,8 @@ import Separator from '../components/Registration/ClientRegistration/Separator';
 import '../style/clientReistration/ClientRegistration.css';
 
 const ClientRegistration = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,6 +30,9 @@ const ClientRegistration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+
+    // After successful signup, navigate to the profile completion page
+    navigate('/profile-completion');
   };
 
   const countryOptions = [

@@ -79,7 +79,7 @@ function IllustratorPortfolioSection() {
 
   return (
     <div>
-      <h2>Illustrator Portfolio</h2>
+      <h1>Illustrator Portfolio</h1>
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         {firstRow.map((illustrator, index) => (

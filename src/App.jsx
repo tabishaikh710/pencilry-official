@@ -6,7 +6,8 @@ import ClientRegistration from './pages/ClientRegistration';
 import FreelancerRegistration from './pages/FreelancerRegistration';
 import SignUpPage from './pages/SignUpPage';
 import PostJob from './pages/PostAjob'; // Ensure you have this component
-
+import ProfileCompletionPage from '../src/pages/ProfileCompletionPage';
+import './style/headings.css'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
 
         <Route path="/register-client" element={<ClientRegistration />} />
         <Route path="/register-freelancer" element={<FreelancerRegistration />} />
-  
+        <Route path="/profile-completion" element={<ProfileCompletionPage />} />
         {/* Add other routes as needed */}
       </Routes>
     </Router>
